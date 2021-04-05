@@ -4,7 +4,9 @@ html {
           box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -98,6 +100,10 @@ h2 {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .header {
   height: 80px;
   width: 100%;
@@ -127,7 +133,6 @@ h2 {
 }
 
 .header_logo .header_logoTwo {
-  display: none;
   margin-top: 28px;
 }
 

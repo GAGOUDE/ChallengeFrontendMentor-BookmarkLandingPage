@@ -3,11 +3,13 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
@@ -17,17 +19,17 @@ body{
     line-height: 1.5;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-h2{
+h2 {
     color: $black;
     font-weight: 500;
 }
 
 // Flexbox
-.flex{
+.flex {
     display: flex;
 
     &_jc-sb {
@@ -50,13 +52,13 @@ h2{
     display: inline-block;
 }
 
-.btnBlue{
+.btnBlue {
     background: $softBlue;
     color: white;
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btnBlue:hover{
+.btnBlue:hover {
     background: $white;
     color: $softBlue;
     border: 2px solid $softBlue;
@@ -64,13 +66,13 @@ h2{
     transition: 0.5s ease-in-out;
 }
 
-.btnWhite{
+.btnWhite {
     background: $white;
     color: $black;
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.btnWhite:hover{
+.btnWhite:hover {
     border: 2px solid $black;
     padding: 10px 26px;
     transition: 0.5s ease-in-out;
@@ -78,13 +80,17 @@ h2{
 
 // Visibility 
 .hide-for-tablet-laptop-desktop {
-    @include breakpoint-up(tablet){
+    @include breakpoint-up(tablet) {
         display: none;
     }
 }
 
 .hide-for-mobile {
-    @include breakpoint-down(tablet){
+    @include breakpoint-down(tablet) {
         display: none;
     }
+}
+
+.hide {
+    display: none;
 }
