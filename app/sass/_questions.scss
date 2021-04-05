@@ -1,0 +1,123 @@
+/* QUESTIONS SECTION */
+.questions{
+    width: 100%;
+    height: 650px;
+    margin-bottom: 0;
+    position: relative;
+
+    &_title{
+        display: grid;
+        place-items: center;
+        margin-bottom: 40px;
+
+        @include breakpoint-down(mobileS){
+            text-align: center;
+        }
+
+        & h2{
+            margin-bottom: 0;
+            
+            @include breakpoint-down(mobileL) {
+                font-size: 25px;
+                width: 55%;
+                text-align: center;
+            }
+
+             @include breakpoint-down(mobileM) {
+                width: 65%;
+             }
+        }
+
+        & p{
+            width: 540px;
+            text-align: center;
+
+            @include breakpoint-down(tablet) {
+                width: 80%;
+                font-size: $font-medium;
+            }
+        }
+    }
+
+    &_lists{
+        margin: 0 auto;
+        width: 500px;
+
+        @include breakpoint-down(laptop){
+            width: 430px;
+        }
+
+        @include breakpoint-down(mobileL) {
+            width: 90%;
+        }
+
+        &_QA{
+
+            & .question {
+                color: $black;
+                display: inline-block;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $softRed;
+                }
+
+                @include breakpoint-down(mobileL) {
+                    font-size: 14px;
+                }
+
+                @include breakpoint-down(mobileS) {
+                    font-size: 12px;
+                }
+            }
+
+            & svg{
+                float: right;
+                cursor: pointer;
+                margin: 16px;
+
+                @include breakpoint-down(mobileS) {
+                    margin: 12px;
+                }
+
+                &:hover path{
+                    stroke: hsl(0, 94%, 66%);
+                }
+
+                &:focus path {
+                    transform: rotate(180deg);
+                }
+
+                &.rotation path {
+                    stroke: hsl(0, 94%, 66%);
+                }
+            }
+        }
+    }
+
+    & button{
+        display: block;
+        margin: 50px auto;
+         width: 140px;
+         height: 50px;
+    }
+}
+
+.answer {
+    display: none;
+}
+
+.questions_line {
+    border: none;
+    border-top: 1px solid $grayishBlue;
+}
+
+.description{
+    display: block;
+}
+
+.rotation {
+    transform: rotate(180deg);
+}

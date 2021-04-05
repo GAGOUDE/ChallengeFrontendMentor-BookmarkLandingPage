@@ -1,0 +1,246 @@
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+
+    @include breakpoint-down(laptop) {
+        height: auto;
+    }
+
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include breakpoint-down(laptop) {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+
+        .hero_text {
+            width: 50%;
+            height: 600px;
+            margin-top: 100px;
+            margin-left: 8%;
+            padding-bottom: 20px;
+
+            @include breakpoint-down(laptop) {
+                width: 95%;
+                text-align: center;
+                margin: 0 auto;
+                height: auto;
+            }
+
+            &_description {
+                width: 500px;
+                padding-top: 50px;
+
+                @include breakpoint-down(laptop) {
+                    width: 98%;
+                    margin: 0 auto;
+                    padding-top: 0;
+                }
+
+                @include breakpoint-down(mobileM) {
+                    margin-top: 50px;
+                }
+
+                @include breakpoint-down(mobileS) {
+                    margin-top: 0;
+                }
+
+                & h1 {
+                    font-size: 45px;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    color: $black;
+                    margin-bottom: 15px;
+
+                    @include breakpoint-down(laptop) {
+                        font-size: 40px;
+                        margin-top: 5px;
+                    }
+
+                    @include breakpoint-down(mobileL) {
+                        position: relative;
+                        z-index: -1;
+                    }
+
+                    @include breakpoint-down(mobileM) {
+                        font-size: 30px;
+                    }
+
+                    @include breakpoint-down(mobileS) {
+                        font-size: 25px;
+                    }
+                }
+
+                & p {
+                    color: $grayishBlue;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+
+                    @include breakpoint-down(mobileL) {
+                        width: 90%;
+                        margin: 0 auto 10px auto;
+                        position: relative;
+                        z-index: -1;
+                    }
+
+                    @include breakpoint-down(mobileM) {
+                        width: 80%;
+                        font-size: 14px;
+                    }
+
+                    @include breakpoint-down(mobileS) {
+                        width: 90%;
+                    }
+                }
+            }
+
+            &_btns {
+
+                & .btn {
+                    width: 190px;
+                    height: 45px;
+                    margin-top: 15px;
+
+                    @include breakpoint-down(tablet) {
+                        width: 170px;
+                        font-size: 14px;
+                    }
+
+                    @include breakpoint-down(mobileM) {
+                        position: relative;
+                        z-index: -1;
+                    }
+
+                    @include breakpoint-down(mobileS) {
+                        width: 140px;
+                        font-size: 14px;
+                        padding: 10px 15px;
+                    }
+                }
+
+                & .btnBlue {
+                    margin-right: 15px;
+
+                    @include breakpoint-down(mobileL) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .hero_image {
+            width: 50%;
+            height: 600px;
+            margin-top: 100px;
+            margin-right: 0;
+            position: relative;
+
+            @include breakpoint-down(laptop) {
+                width: 95%;
+                text-align: center;
+                margin: 60px auto 0 auto;
+                height: 650px;
+            }
+
+            @include breakpoint-down(tablet) {
+                height: 550px;
+                z-index: -1;
+            }
+
+            @include breakpoint-down(mobileL) {
+                height: 320px;
+            }
+
+            @include breakpoint-down(mobileM) {
+                height: 250px;
+            }
+
+            @include breakpoint-down(mobileM) {
+                height: 210px;
+                margin-top: 30px;
+            }
+
+
+            &_bookmark {
+                position: relative;
+                z-index: 1;
+
+                @include breakpoint-down(laptop) {
+                    width: 100%;
+                    height: auto;
+                    margin: 0 auto;
+                }
+
+                @include breakpoint-down(mobileL) {
+                    width: 90%;
+                }
+
+                & img {
+                    max-width: 100%;
+
+                    @include breakpoint-down(laptop) {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            & .designBgRight {
+                position: relative;
+                bottom: 400px;
+                left: 7%;
+
+                @include breakpoint-down(laptop) {
+                    left: 14%;
+                }
+
+                @include breakpoint-down(tablet) {
+                    left: 9%;
+                }
+
+                @include breakpoint-down(mobileL) {
+                    bottom: 240px;
+                    left: 5%;
+                }
+
+                @include breakpoint-down(mobileM) {
+                    bottom: 205px;
+                }
+
+                @include breakpoint-down(mobileS) {
+                    bottom: 190px;
+                }
+
+                & img {
+                    width: 650px;
+
+                    @include breakpoint-down(laptop) {
+                        width: 750px;
+                    }
+
+                    @include breakpoint-down(tablet) {
+                        width: 650px;
+                    }
+
+                    @include breakpoint-down(mobileL) {
+                        width: 390px;
+                    }
+
+                    @include breakpoint-down(mobileM) {
+                        width: 340px;
+                    }
+
+                    @include breakpoint-down(mobileS) {
+                        width: 290px;
+                    }
+                }
+            }
+        }
+    }
+}
