@@ -110,9 +110,6 @@ h2 {
 }
 
 .header_logo {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
   width: 200px;
   height: 80px;
   margin-left: 8%;
@@ -123,6 +120,15 @@ h2 {
   .header_logo {
     background-size: 80%;
   }
+}
+
+.header_logo .header_logoOne {
+  margin-top: 28px;
+}
+
+.header_logo .header_logoTwo {
+  display: none;
+  margin-top: 28px;
 }
 
 .header_toggle {
@@ -311,17 +317,12 @@ h2 {
   }
 }
 
-.header.active .header_logo {
-  background-image: url("/images/logo-bookmark-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
+.header.active .header_logoOne {
+  display: none;
 }
 
-@media (max-width: 26.625em) {
-  .header.active .header_logo {
-    background-size: 80%;
-  }
+.header.active .header_logoTwo {
+  display: block;
 }
 
 .header.active .header_social {

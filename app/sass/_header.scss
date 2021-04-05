@@ -9,10 +9,6 @@
     }
 
     &_logo {
-
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center center;
         width: 200px;
         height: 80px;
         margin-left: 8%;
@@ -20,6 +16,15 @@
 
         @include breakpoint-down(mobileL) {
             background-size: 80%;
+        }
+
+        & .header_logoOne {
+            margin-top: 28px;
+        }
+
+        & .header_logoTwo {
+            display: none;
+            margin-top: 28px;
         }
     }
 
@@ -180,15 +185,12 @@
         }
     }
 
-    &.active .header_logo {
-        background-image: url('/images/logo-bookmark-mobile.svg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: center center;
+    &.active .header_logoOne {
+        display: none;
+    }
 
-        @include breakpoint-down(mobileL) {
-            background-size: 80%;
-        }
+    &.active .header_logoTwo {
+        display: block;
     }
 
     &.active .header_social {
